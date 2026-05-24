@@ -1,0 +1,29 @@
+{
+  "name": "bbx-kyc-flow",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/bbx-kyc-flow.umd.js",
+  "module": "./dist/bbx-kyc-flow.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/bbx-kyc-flow.es.js",
+      "require": "./dist/bbx-kyc-flow.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@open-iframe-resizer/core": "2.3.1",
+    "lit": "3.3.2"
+  },
+  "devDependencies": {
+    "typescript": "6.0.2",
+    "vite": "8.0.12"
+  }
+}

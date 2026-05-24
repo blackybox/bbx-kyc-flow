@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bbx-kyc-flow — Demo</title>
+    <script type="module" src="/src/index.ts"></script>
+  </head>
+  <body>
+    <bbx-kyc-flow
+      token=""
+    ></bbx-kyc-flow>
+
+    <script>
+      const $kycFlow = document.querySelector("bbx-kyc-flow");
+
+      $kycFlow.addEventListener("started", () => {
+        console.log("KYC flow started");
+      });
+
+      $kycFlow.addEventListener("document_verified", (e) => {
+        console.log("Document verified");
+        console.log("Document data:", e);
+      });
+
+      $kycFlow.addEventListener("biometric_verified", (e) => {
+        console.log("Biometric verified");
+        console.log("Biometric data:", e);
+      });
+    </script>
+  </body>
+</html>
